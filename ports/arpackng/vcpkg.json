@@ -1,0 +1,22 @@
+{
+	"name": "arpack-ng",
+	"version": "3.8.0",
+	"description": "Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems.",
+	"homepage": "https://github.com/juanjosegarciaripoll/arpack-ng.git",
+	"dependencies": [
+		"blas",
+		"lapack",
+		{
+			"name": "vcpkg-cmake",
+			"host": true
+		},
+		{
+			"name": "vcpkg-cmake-config",
+			"host": true
+		},
+		{
+			"name": "vcpkg-gfortran",
+			"platform": "windows"
+		}
+	]
+}
