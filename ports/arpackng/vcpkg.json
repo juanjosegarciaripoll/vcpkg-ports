@@ -1,5 +1,5 @@
 {
-	"name": "arpack-ng",
+	"name": "arpackng",
 	"version": "3.8.0",
 	"description": "Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems.",
 	"homepage": "https://github.com/juanjosegarciaripoll/arpack-ng.git",
