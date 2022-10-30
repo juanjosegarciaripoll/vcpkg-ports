@@ -1,0 +1,20 @@
+{
+	"name": "tensor",
+	"version": "0.2.0",
+	"description": "C++ library for numerical arrays and tensor objects and operations with them",
+	"homepage": "https://github.com/juanjosegarciaripoll/tensor/",
+	"dependencies": [
+		"blas",
+		"lapack",
+		"arpackng",
+		"fftw3",
+		{
+			"name": "vcpkg-cmake",
+			"host": true
+		},
+		{
+			"name": "vcpkg-cmake-config",
+			"host": true
+		}
+	]
+}
