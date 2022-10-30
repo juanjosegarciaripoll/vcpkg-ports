@@ -32,8 +32,7 @@ vcpkg_cmake_install()
 
 vcpkg_cmake_config_fixup(
   PACKAGE_NAME arpackng
-  CONFIG_PATH lib/cmake/arpackng
-  NO_PREFIX_CORRECTION)
+  CONFIG_PATH lib/cmake/arpackng)
 
 # handle copyright
 file(INSTALL "${SOURCE_PATH}/COPYING" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
@@ -42,12 +41,3 @@ vcpkg_fixup_pkgconfig()
 
 # remove debug includes
 file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include)
-
-if(VCPKG_TARGET_IS_WINDOWS)
-    if(EXISTS "${CURRENT_PACKAGES_DIR}/lib/libarpack.lib")
-        file(RENAME "${CURRENT_PACKAGES_DIR}/lib/libarpack.lib" "${CURRENT_PACKAGES_DIR}/lib/arpack.lib")
-    endif()
-    if(EXISTS "${CURRENT_PACKAGES_DIR}/debug/lib/libarpack.lib")
-        file(RENAME "${CURRENT_PACKAGES_DIR}/debug/lib/libarpack.lib" "${CURRENT_PACKAGES_DIR}/debug/lib/arpack.lib")
-    endif()
-endif()
